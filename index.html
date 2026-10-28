@@ -5,37 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الشاعرة سلمى عنقر | Salma-Angar</title>
   
-  <!-- كود AdSense تاعك -->
+  <!-- 1. كود التحقق Google Search -->
+  <meta name="google-site-verification" content="DjX5IHGY0UX1W0CbX7WXLZlPDo8ojAshR9J-uQ_P5xA" />
+  
+  <!-- 2. كود AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6300851955642486" crossorigin="anonymous"></script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { background: #0b0a0d; color: #ededed; font-family: 'Cairo', sans-serif; }
-    .font-amiri { font-family: 'Amiri', serif; }
+    body{background:#0b0a0d;color:#ededed;font-family:'Cairo',sans-serif}
+    .font-amiri{font-family:'Amiri',serif}
+    .tab-content.hidden{display:none}
   </style>
 </head>
-<body>
+<body class="bg-[#0b0a0d] text-[#ededed]">
 
 <header class="sticky top-0 z-50 bg-[#0d0d0e]/95 border-b border-[#222124]">
   <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-    <button onclick="showTab('contact-tab')" class="px-4 py-2 text-xs font-bold text-black bg-[#F59E0B] rounded-xl">
-      طلب كلمات خاصة ✍️
-    </button>
-    <nav class="hidden lg:flex gap-6 text-sm text-stone-400">
+    <button onclick="showTab('contact-tab')" class="px-4 py-2 text-xs font-bold text-black bg-[#F59E0B] rounded-xl">طلب كلمات خاصة ✍️</button>
+    <nav class="hidden lg:flex items-center gap-6 text-sm text-stone-400">
       <button onclick="showTab('diwan-tab')" class="text-[#F59E0B] font-bold">ديوان الأغاني</button>
       <button onclick="showTab('articles-tab')" class="hover:text-white">المقالات</button>
       <button onclick="showTab('about-tab')" class="hover:text-white">السيرة</button>
       <button onclick="showTab('gallery-tab')" class="hover:text-white">معرض الصور</button>
       <button onclick="showTab('contact-tab')" class="hover:text-white">تواصل</button>
     </nav>
-    <div class="w-10 h-10 rounded-full border-2 border-[#F59E0B] overflow-hidden">
-      <img src="1.jpg" class="w-full h-full object-cover" onerror="this.src='2.jpg'" />
+    <div class="flex items-center gap-2.5">
+      <div class="w-10 h-10 rounded-full border-2 border-[#F59E0B] overflow-hidden">
+        <img src="1.jpg" class="w-full h-full object-cover" onerror="this.src='2.jpg'" />
+      </div>
     </div>
   </div>
 </header>
 
-<div class="lg:hidden flex justify-center gap-1.5 p-2 bg-[#141317] text-xs">
+<div class="lg:hidden flex justify-center gap-1.5 p-2 bg-[#141317] border-b border-[#25232B] text-xs">
   <button onclick="showTab('diwan-tab')" class="px-2.5 py-1.5 rounded-lg bg-[#F59E0B] text-black font-bold">ديوان الأغاني</button>
   <button onclick="showTab('articles-tab')" class="px-2.5 py-1.5 rounded-lg text-stone-300">المقالات</button>
   <button onclick="showTab('about-tab')" class="px-2.5 py-1.5 rounded-lg text-stone-300">السيرة</button>
@@ -44,7 +48,6 @@
 </div>
 
 <main class="max-w-5xl mx-auto px-4 py-8 pb-20">
-
   <section class="text-center py-6 space-y-6">
     <div class="inline-block max-w-xs mx-auto border-2 border-[#F59E0B]/40 p-2 rounded-2xl bg-[#141416]">
       <img src="1.jpg" class="rounded-xl w-full" onerror="this.src='2.jpg'" />
@@ -54,116 +57,87 @@
     <p class="text-[#F59E0B] font-amiri text-lg italic">"في هذه الواجهة، كل نص شعري كُتب من نبض الروح.."</p>
   </section>
 
+  <!-- ديوان الأغاني -->
   <div id="diwan-tab" class="tab-content space-y-8">
     <article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
       <h3 class="text-2xl font-black text-white">على أوتار الغياب</h3>
       <div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3">
         <p>يمرّ الليلُ مشتعلاً بسؤالك..</p>
+        <p>وكلّ دروبِ هذي الأرض مالت نحو بابِك</p>
+        <p>أنا ما نسيتُ.. ولكنّي تعلّمتُ الغيابَ لكي أراك</p>
       </div>
-      <div class="p-4 rounded-xl bg-[#17161B] border flex justify-between">
+      <div class="p-4 rounded-xl bg-[#17161B] border border-[#2E2C36] flex justify-between items-center">
         <span class="text-sm font-bold text-white">ألحان: بيانو ووتريات شرقية</span>
-        <button onclick="toggleAudio('piano', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold">▶</button>
+        <button onclick="toggleAudio('piano', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold flex items-center justify-center">▶</button>
       </div>
     </article>
-
     <article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
       <h3 class="text-2xl font-black text-white">رسالة ما وصلتش</h3>
-      <div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3">
-        <p>كتبتلك سطور في نص الليل ومسحتها</p>
-      </div>
-      <div class="p-4 rounded-xl bg-[#17161B] border flex justify-between">
-        <span class="text-sm font-bold text-white">كمان وسانتي راي</span>
-        <button onclick="toggleAudio('rai', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold">▶</button>
-      </div>
+      <div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3"><p>كتبتلك سطور في نص الليل ومسحتها.. خفت تظن بلي قلبي نساك</p></div>
+      <div class="p-4 rounded-xl bg-[#17161B] border flex justify-between"><span class="text-sm font-bold text-white">كمان وسانتي راي</span><button onclick="toggleAudio('rai', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold">▶</button></div>
     </article>
-
     <article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
       <h3 class="text-2xl font-black text-white">راني جاي</h3>
-      <div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3">
-        <p>قولوا للغالي راني جاي.. طال غيابي والشوق دواي</p>
-      </div>
-      <div class="p-4 rounded-xl bg-[#17161B] border flex justify-between">
-        <span class="text-sm font-bold text-white">توزيع وتريات جزائرية</span>
-        <button onclick="toggleAudio('piano', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold">▶</button>
-      </div>
+      <div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3"><p>قولوا للغالي راني جاي.. طال غيابي والشوق دواي</p></div>
+      <div class="p-4 rounded-xl bg-[#17161B] border flex justify-between"><span class="text-sm font-bold text-white">توزيع وتريات جزائرية</span><button onclick="toggleAudio('piano', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold">▶</button></div>
     </article>
   </div>
 
+  <!-- المقالات -->
   <div id="articles-tab" class="tab-content hidden space-y-6">
-    <article class="p-8 rounded-2xl border-2 border-[#26242C] bg-[#121115]">
+    <article class="p-8 rounded-2xl border-2 border-[#26242C] bg-[#121115] space-y-6">
       <h2 class="text-2xl font-black text-white">صُنّاع الخلود: كُتّاب الأغنية في الجزائر وعلى رأسهم الراحل محمد عنقر "صانع النجوم"</h2>
-      <p class="font-amiri text-stone-300 mt-4">تاريخ الأغنية الجزائرية كُتب بأقلام شعراء نذروا أعمارهم لترجمة أفراح الناس وآلامهم.</p>
+      <div class="p-4 bg-[#18171C] border-r-4 border-[#F59E0B] text-stone-200 font-amiri">تاريخ الأغنية الجزائرية كُتب بأقلام شعراء نذروا أعمارهم لترجمة أفراح الناس وآلامهم، ومن بين هؤلاء الكبار يبرز اسم الراحل محمد عنقر كأحد أهم صناع النجوم في الجزائر.</div>
+      <p class="font-amiri text-stone-300 leading-loose">الشاعر الحقيقي هو الذي يكتب للناس لا عن الناس. هكذا كانت مدرسة محمد عنقر، التي تواصل اليوم شقيقته سلمى عنقر حمل رسالتها بكلمات من ذهب.</p>
     </article>
   </div>
 
+  <!-- السيرة -->
   <div id="about-tab" class="tab-content hidden space-y-6">
-    <div class="p-6 rounded-2xl bg-[#141318] border border-[#2B2933]">
+    <div class="p-6 rounded-2xl bg-[#141318] border border-[#2B2933] space-y-4">
       <h3 class="text-xl font-bold text-[#F59E0B]">📌 السيرة الذاتية الرسمية للشاعرة سلمى عنقر</h3>
-      <p class="text-stone-300 font-amiri mt-2">سلمى عنقر شاعرة ومؤلفة غنائية جزائرية بارزة. شقيقة الملحن الراحل محمد عنقر.</p>
+      <p class="text-stone-300 font-amiri leading-loose">سلمى عنقر شاعرة ومؤلفة غنائية جزائرية بارزة. تنتمي لعائلة فنية عريقة، شقيقة الملحن الراحل محمد عنقر رحمه الله، الذي يعتبر من أكبر الملحنين وصناع النجوم في تاريخ الأغنية الجزائرية والراي. سلمى تكتب الأغنية العاطفية والوطنية والاجتماعية، وتتعاون مع كبار الفنانين الجزائريين.</p>
     </div>
   </div>
 
+  <!-- معرض الصور -->
   <div id="gallery-tab" class="tab-content hidden space-y-6">
-    <div class="p-4 bg-[#141318] border rounded-2xl text-center">
-      <img src="2.jpg" class="rounded-xl w-full" onerror="this.src='1.jpg'" />
-      <h4 class="text-lg font-bold text-white pt-2">إطلالة البحر</h4>
-    </div>
-    <div class="p-4 bg-[#141318] border rounded-2xl text-center">
-      <img src="1.jpg" class="rounded-xl w-full" onerror="this.src='2.jpg'" />
-      <h4 class="text-lg font-bold text-white pt-2">إطلالة الأمسيات</h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div class="p-4 bg-[#141318] border border-[#2B2933] rounded-2xl text-center"><img src="2.jpg" class="rounded-xl w-full" onerror="this.src='1.jpg'" /><h4 class="text-lg font-bold text-white pt-2">إطلالة البحر - سلمى عنقر</h4></div>
+      <div class="p-4 bg-[#141318] border border-[#2B2933] rounded-2xl text-center"><img src="1.jpg" class="rounded-xl w-full" onerror="this.src='2.jpg'" /><h4 class="text-lg font-bold text-white pt-2">إطلالة الأمسيات</h4></div>
     </div>
   </div>
 
+  <!-- تواصل -->
   <div id="contact-tab" class="tab-content hidden p-6 bg-[#121114] border-2 border-[#2B2933] rounded-2xl space-y-4">
     <h3 class="text-2xl font-black text-white text-center">تواصل مع الشاعرة</h3>
-    <input id="userName" type="text" placeholder="اسمك" class="w-full p-3 rounded-xl bg-[#1A191F] border text-white text-xs" />
-    <textarea id="userMsg" rows="4" placeholder="تفاصيل العمل..." class="w-full p-3 rounded-xl bg-[#1A191F] border text-white text-xs"></textarea>
+    <input id="userName" type="text" placeholder="اسمك الكريم" class="w-full p-3 rounded-xl bg-[#1A191F] border border-[#2B2933] text-white text-xs" />
+    <textarea id="userMsg" rows="4" placeholder="تفاصيل العمل الفني المطلوب..." class="w-full p-3 rounded-xl bg-[#1A191F] border border-[#2B2933] text-white text-xs"></textarea>
     <button onclick="sendWA()" class="w-full py-3 bg-[#F59E0B] text-black font-extrabold rounded-xl">إرسال لواتساب 💬</button>
   </div>
-
 </main>
 
-<footer class="border-t border-[#222128] py-8 text-center text-xs text-stone-500">
-  Salma-Angar © 2026
-</footer>
+<footer class="border-t border-[#222128] py-8 text-center text-xs text-stone-500">Salma-Angar © 2026 - جميع الحقوق محفوظة</footer>
 
 <script>
-function showTab(id){
-  document.querySelectorAll('.tab-content').forEach(e=>e.classList.add('hidden'));
-  document.getElementById(id).classList.remove('hidden');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-function sendWA(){
-  let n=document.getElementById('userName').value;
-  let m=document.getElementById('userMsg').value;
-  window.open('https://wa.me/?text='+encodeURIComponent('طلب من: '+n+'\n'+m),'_blank');
-}
-let ctx=null, osc=null, playing=false;
+function showTab(id){document.querySelectorAll('.tab-content').forEach(e=>e.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+function sendWA(){let n=document.getElementById('userName').value;let m=document.getElementById('userMsg').value;if(!n||!m){alert('اكتب اسمك والرسالة');return}window.open('https://wa.me/?text='+encodeURIComponent('طلب عمل فني من: '+n+'\nالتفاصيل: '+m),'_blank')}
+let ctx=null,playing=false,osc=null;
 function toggleAudio(type,btn){
-  if(!ctx) ctx=new(window.AudioContext||window.webkitAudioContext)();
-  if(playing){
-    if(osc) osc.stop();
-    playing=false;
-    btn.innerHTML='▶';
-    return;
-  }
-  playing=true;
-  btn.innerHTML='⏸';
+  if(!ctx)ctx=new(window.AudioContext||window.webkitAudioContext)();
+  if(playing){if(osc)try{osc.stop()}catch(e){} playing=false; btn.innerHTML='▶'; return}
+  playing=true; btn.innerHTML='⏸';
   let now=ctx.currentTime;
-  [261.6,311.1,392,415.3].forEach((f,i)=>{
-    let o=ctx.createOscillator();
-    let g=ctx.createGain();
-    o.type=type==='rai'?'sawtooth':'sine';
-    o.frequency.value=f;
-    g.gain.setValueAtTime(0.15,now+i*0.6);
-    g.gain.exponentialRampToValueAtTime(0.001,now+i*0.6+0.55);
-    o.connect(g);
-    g.connect(ctx.destination);
-    o.start(now+i*0.6);
-    o.stop(now+i*0.6+0.6);
+  let notes=[261.63,329.63,392.00,415.30,392.00,329.63,261.63];
+  notes.forEach((f,i)=>{
+    let o=ctx.createOscillator(); let g=ctx.createGain();
+    o.type=type==='rai'?'sawtooth':'triangle'; o.frequency.value=f;
+    g.gain.setValueAtTime(0.18,now+i*0.5); g.gain.exponentialRampToValueAtTime(0.001,now+i*0.5+0.45);
+    o.connect(g); g.connect(ctx.destination); o.start(now+i*0.5); o.stop(now+i*0.5+0.5);
+    if(i===0)osc=o;
   });
+  setTimeout(()=>{playing=false; btn.innerHTML='▶'}, notes.length*500+600);
 }
 </script>
-
 </body>
-        </html>
+</html>
