@@ -1,176 +1,29 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>الشاعرة سلمى عنقر | Salma-Angar · الموقع الرسمي</title>
-  <meta name="description" content="الموقع الرسمي للشاعرة والمؤلفة الغنائية الجزائرية سلمى عنقر (Salma Angar) - ديوان الأغاني والكلمات، المقالات المفتوحة، والسيرة الفنية." />
-  <link rel="preconnect" href="https://googleapis.com" />
-  <link rel="preconnect" href="https://gstatic.com" crossorigin />
-  <link href="https://googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <script src="https://tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Cairo', 'system-ui', 'sans-serif'],
-            serif: ['Amiri', 'serif']
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    body { background-color: #0b0a0d; color: #ededed; font-family: 'Cairo', system-ui, sans-serif; scroll-behavior: smooth; }
-    .font-amiri { font-family: 'Amiri', serif; }
-    .tab-content { display: none; }
-    .tab-content.active { display: block; }
-  </style>
-</head>
-<body class="bg-[#0b0a0d] text-[#ededed] selection:bg-[#F59E0B] selection:text-black antialiased">
-
-  <!-- الهيدر الرسمي -->
-  <header class="sticky top-0 z-50 bg-[#0d0d0e]/95 backdrop-blur-md border-b border-[#222124]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4">
-      <div class="flex items-center gap-2 sm:gap-2.5">
-        <button onclick="showTab('contact-tab'); scrollToSection('contact-tab')" class="px-4 py-2 text-xs sm:text-sm font-bold text-black bg-[#F59E0B] hover:bg-[#D97706] rounded-xl shadow-md transition">
-          طلب كلمات خاصة ✍️
-        </button>
-        <a href="https://wa.me" target="_blank" class="p-2 sm:px-2.5 bg-[#10B981] text-white rounded-xl hover:bg-[#059669] transition">
-          💬
-        </a>
-      </div>
-
-      <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-stone-400">
-        <button onclick="showTab('diwan-tab')" class="nav-link text-[#F59E0B] font-bold border-b-2 border-[#F59E0B] py-1 transition">ديوان الأغاني</button>
-        <button onclick="showTab('articles-tab')" class="nav-link hover:text-stone-200 py-1 transition">المقالات المفتوحة</button>
-        <button onclick="showTab('about-tab')" class="nav-link hover:text-stone-200 py-1 transition">الروائع والسيرة</button>
-        <button onclick="showTab('gallery-tab')" class="nav-link hover:text-stone-200 py-1 transition">معرض الصور</button>
-        <button onclick="showTab('contact-tab')" class="nav-link hover:text-stone-200 py-1 transition">تواصل وحجز كلمات</button>
-      </nav>
-
-      <div class="flex items-center gap-2.5">
-        <div class="text-left font-mono">
-          <span class="block text-sm font-bold text-white">Salma-</span>
-          <span class="block text-sm font-bold text-white -mt-1">Angar</span>
-        </div>
-        <div class="w-10 h-10 rounded-full border-2 border-[#F59E0B] overflow-hidden bg-stone-800">
-          <img src="1.jpg" alt="سلمى عنقر" class="w-full h-full object-cover" />
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- شريط القوائم للهواتف -->
-  <div class="lg:hidden flex items-center justify-start gap-2 p-2 bg-[#141317] border-b border-[#25232B] text-xs overflow-x-auto whitespace-nowrap scrollbar-none">
-    <button onclick="showTab('diwan-tab')" class="mobile-nav-link px-3 py-1.5 rounded-lg bg-[#F59E0B] text-black font-bold">ديوان الأغاني</button>
-    <button onclick="showTab('articles-tab')" class="mobile-nav-link px-3 py-1.5 rounded-lg text-stone-400 bg-stone-900/40">المقالات المفتوحة</button>
-    <button onclick="showTab('about-tab')" class="mobile-nav-link px-3 py-1.5 rounded-lg text-stone-400 bg-stone-900/40">الروائع والسيرة</button>
-    <button onclick="showTab('gallery-tab')" class="mobile-nav-link px-3 py-1.5 rounded-lg text-stone-400 bg-stone-900/40">معرض الصور</button>
-    <button onclick="showTab('contact-tab')" class="mobile-nav-link px-3 py-1.5 rounded-lg text-stone-400 bg-stone-900/40">تواصل</button>
-  </div>
-
-  <main class="pb-20 max-w-5xl mx-auto px-4 py-8">
-    <!-- البانر التقديمي وبطاقة الشاعرة -->
-    <section class="text-center py-6 space-y-6">
-      <div class="inline-block max-w-xs mx-auto border-2 border-[#F59E0B]/40 p-2 rounded-2xl bg-[#141416]">
-        <img src="2.jpg" alt="سلمى عنقر" class="rounded-xl w-full object-cover shadow-lg" />
-        <span class="block text-xs font-bold text-[#F59E0B] pt-2">سلمى عنقر · كاتبة معتمدة 🌿</span>
-      </div>
-      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight">ديوان الأغاني والكلمات</h1>
-      <p class="text-[#F59E0B] font-amiri text-lg italic">"في هذه الواجهة، كل نص شعري كُتب من نبض الروح.. وتحته مباشرة الأغنية واللحن الذي يروي حكايته."</p>
-    </section>
-
-    <!-- تبويب ديوان الأغاني مع مشغل الصوت الفعلي -->
-    <div id="diwan-tab" class="tab-content active space-y-8">
-      <!-- بطاقة على أوتار الغياب -->
-      <article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4 shadow-xl">
-        <div class="flex items-center justify-between">
-          <h3 class="text-2xl font-black text-white">على أوتار الغياب</h3>
-          <span class="px-2.5 py-1 text-xs font-bold text-[#F59E0B] bg-[#F59E0B]/10 rounded-lg">قصيدة غنائية</span>
-        </div>
-        <p class="font-amiri text-xl leading-relaxed text-stone-300 text-center py-4">
-          على أوتارِ الغيابِ تَعزفُ أشواقي شَجناً،<br>
-          وَيَمُرُّ طيفُكَ في ليلِ الحَنينِ سَكَناً.<br>
-          مَا غِبتَ عَن عيني وإن بَعُد المَدى،<br>
-          أنتَ النَّشيدُ وعُمرٌ بالوَفاءِ بَدَا.
-        </p>
-        <div class="border-t border-[#222124] pt-4">
-          <label class="block text-xs font-medium text-stone-500 mb-2">الاستماع إلى اللحن والأغنية الكترونياً:</label>
-          <audio controls class="w-full accent-[#F59E0B]">
-            <source src="audio1.mp3" type="audio/mpeg">
-            متصفحك لا يدعم مشغل الصوت.
-          </audio>
-        </div>
-      </article>
-    </div>
-
-    <!-- تبويب المقالات المفتوحة -->
-    <div id="articles-tab" class="tab-content space-y-6">
-      <div class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-3">
-        <h3 class="text-xl font-bold text-white">الكلمة المكتوبة وأثرها في الأغنية المعاصرة</h3>
-        <span class="text-xs text-stone-500 block">نُشر في: أكتوبر 2026</span>
-        <p class="text-stone-400 text-sm leading-relaxed">
-          إن النص الغنائي ليس مجرد رصٍّ للكلمات على بحور الشعر، بل هو تجسيد للمشاعر الإنسانية والاجتماعية المعاشة. الأغنية الناجحة تبدأ دائماً من عمق الفكرة وقوة المفردة المكتوبة.
-        </p>
-      </div>
-    </div>
-
-    <!-- تبويب الروائع والسيرة -->
-    <div id="about-tab" class="tab-content space-y-6">
-      <div class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
-        <h3 class="text-xl font-bold text-[#F59E0B]">السيرة الفنية والأدبية</h3>
-        <p class="text-stone-300 text-sm leading-relaxed font-amiri text-lg">
-          سلمى عنقر، شاعرة ومؤلفة غنائية جزائرية، تمتاز نصوصها بالعمق الوجداني ومحاكاة الأصالة الأدبية بروح معاصرة. قدمت العديد من التعاونيات الفنية والأعمال الغنائية التي أثرت الساحة الفنية بمفردات متميزة تعبر عن الهوية والمشاعر الإنسانية الصادقة.
-        </p>
-      </div>
-    </div>
-
-    <!-- تبويب معرض الصور -->
-    <div id="gallery-tab" class="tab-content">
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <div class="overflow-hidden rounded-xl border border-[#242329] bg-stone-900 aspect-square">
-          <img src="1.jpg" alt="معرض صور سلمى عنقر" class="w-full h-full object-cover hover:scale-105 transition duration-300" />
-        </div>
-        <div class="overflow-hidden rounded-xl border border-[#242329] bg-stone-900 aspect-square">
-          <img src="2.jpg" alt="معرض صور سلمى عنقر" class="w-full h-full object-cover hover:scale-105 transition duration-300" />
-        </div>
-      </div>
-    </div>
-
-    <!-- تبويب تواصل وحجز الكلمات -->
-    <div id="contact-tab" class="tab-content">
-      <div class="p-6 rounded-2xl border border-[#242329] bg-[#121214] max-w-xl mx-auto space-y-4">
-        <h3 class="text-xl font-bold text-white text-center">حجز نص أو تعاون فني</h3>
-        <form class="space-y-4 text-sm" onsubmit="event.preventDefault(); alert('تم إرسال طلبك بنجاح وسيتم التواصل معك قريباً.');">
-          <div>
-            <label class="block text-stone-400 mb-1">الاسم الكريم / الجهة الفنية</label>
-            <input type="text" required class="w-full px-4 py-2.5 rounded-xl bg-[#1a191e] border border-[#2a2930] text-white focus:outline-none focus:border-[#F59E0B]" />
-          </div>
-          <div>
-            <label class="block text-stone-400 mb-1">نوع العمل المطلوب</label>
-            <select class="w-full px-4 py-2.5 rounded-xl bg-[#1a191e] border border-[#2a2930] text-white focus:outline-none focus:border-[#F59E0B]">
-              <option>كلمات أغنية عاطفية</option>
-              <option>قصيدة فصحى</option>
-              <option>أوبريت أو عمل وطني</option>
-              <option>تعاون فني / تلحين</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-stone-400 mb-1">تفاصيل إضافية أو تفاصيل التواصل</label>
-            <textarea rows="3" class="w-full px-4 py-2.5 rounded-xl bg-[#1a191e] border border-[#2a2930] text-white focus:outline-none focus:border-[#F59E0B]"></textarea>
-          </div>
-          <button type="submit" class="w-full py-3 bg-[#F59E0B] hover:bg-[#D97706] text-black font-bold rounded-xl transition">
-            إرسال الطلب للشاعرة 📨
-          </button>
-        </form>
-      </div>
-    </div>
-  </main>
-
-  <!-- سكربت التحكم في التبويبات -->
-  <script>
     function showTab(tabId) {
       // إخفاء كل المحتويات أولاً
-    
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      // إظهار التبويب المختار
+      const targetTab = document.getElementById(tabId);
+      if(targetTab) targetTab.classList.add('active');
+
+      // تحديث مظهر الروابط النشطة في ديسكتوب
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('text-[#F59E0B]', 'font-bold', 'border-b-2', 'border-[#F59E0B]');
+        link.classList.add('text-stone-400');
+      });
+
+      // تحديث مظهر الأزرار النشطة في الموبايل
+      document.querySelectorAll('.mobile-nav-link').forEach(btn => {
+        btn.classList.remove('bg-[#F59E0B]', 'text-black', 'font-bold');
+        btn.classList.add('text-stone-400', 'bg-stone-900/40');
+      });
+    }
+
+    function scrollToSection(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
