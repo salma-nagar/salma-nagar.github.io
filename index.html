@@ -1,29 +1,196 @@
-    function showTab(tabId) {
-      // إخفاء كل المحتويات أولاً
-      document.querySelectorAll('.tab-content').forEach(content => {
-        content.classList.remove('active');
-      });
-      // إظهار التبويب المختار
-      const targetTab = document.getElementById(tabId);
-      if(targetTab) targetTab.classList.add('active');
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>الشاعرة سلمى عنقر | Salma-Angar · الموقع الرسمي</title>
+<meta name="description" content="الموقع الرسمي للشاعرة سلمى عنقر" />
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { sans: ['Cairo','sans-serif'], serif: ['Amiri','serif'] } } } }
+</script>
+<style>
+body { background-color: #0b0a0d; color: #ededed; font-family: 'Cairo', sans-serif; }
+.font-amiri { font-family: 'Amiri', serif; }
+</style>
+</head>
+<body class="bg-[#0b0a0d] text-[#ededed] antialiased">
 
-      // تحديث مظهر الروابط النشطة في ديسكتوب
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('text-[#F59E0B]', 'font-bold', 'border-b-2', 'border-[#F59E0B]');
-        link.classList.add('text-stone-400');
-      });
+<header class="sticky top-0 z-50 bg-[#0d0d0e]/95 backdrop-blur-md border-b border-[#222124]">
+<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<button onclick="showTab('contact-tab')" class="px-4 py-2 text-xs font-bold text-black bg-[#F59E0B] rounded-xl">طلب كلمات خاصة ✍️</button>
+<a href="https://wa.me/?text=مرحبا_الشاعرة_سلمى_عنقر" target="_blank" class="p-2 bg-[#10B981] text-white rounded-xl">💬</a>
+</div>
+<nav class="hidden lg:flex items-center gap-6 text-sm text-stone-400">
+<button onclick="showTab('diwan-tab')" class="text-[#F59E0B] font-bold border-b-2 border-[#F59E0B]">ديوان الأغاني</button>
+<button onclick="showTab('articles-tab')" class="hover:text-white">المقالات المفتوحة</button>
+<button onclick="showTab('about-tab')" class="hover:text-white">الروائع والسيرة</button>
+<button onclick="showTab('gallery-tab')" class="hover:text-white">معرض الصور</button>
+<button onclick="showTab('contact-tab')" class="hover:text-white">تواصل وحجز كلمات</button>
+</nav>
+<div class="flex items-center gap-2.5">
+<div class="text-left font-mono">
+<span class="block text-sm font-bold text-white">Salma-</span>
+<span class="block text-sm font-bold text-white -mt-1">Angar</span>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-[#F59E0B] overflow-hidden bg-stone-800">
+<img src="1.jpg" alt="سلمى عنقر" class="w-full h-full object-cover" />
+</div>
+</div>
+</div>
+</header>
 
-      // تحديث مظهر الأزرار النشطة في الموبايل
-      document.querySelectorAll('.mobile-nav-link').forEach(btn => {
-        btn.classList.remove('bg-[#F59E0B]', 'text-black', 'font-bold');
-        btn.classList.add('text-stone-400', 'bg-stone-900/40');
-      });
-    }
+<div class="lg:hidden flex items-center justify-center gap-1.5 p-2 bg-[#141317] border-b border-[#25232B] text-xs overflow-x-auto">
+<button onclick="showTab('diwan-tab')" class="px-2.5 py-1.5 rounded-lg bg-[#F59E0B] text-black font-bold">ديوان الأغاني</button>
+<button onclick="showTab('articles-tab')" class="px-2.5 py-1.5 rounded-lg text-stone-300">المقالات المفتوحة</button>
+<button onclick="showTab('about-tab')" class="px-2.5 py-1.5 rounded-lg text-stone-300">الروائع والسيرة</button>
+<button onclick="showTab('gallery-tab')" class="px-2.5 py-1.5 rounded-lg text-stone-300">معرض الصور</button>
+<button onclick="showTab('contact-tab')" class="px-2.5 py-1.5 rounded-lg text-stone-300">تواصل</button>
+</div>
 
-    function scrollToSection(id) {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
+<main class="pb-20 max-w-5xl mx-auto px-4 py-8">
+
+<section class="text-center py-6 space-y-6">
+<div class="inline-block max-w-xs mx-auto border-2 border-[#F59E0B]/40 p-2 rounded-2xl bg-[#141416]">
+<img src="1.jpg" alt="سلمى عنقر" class="rounded-xl w-full" />
+<span class="block text-xs font-bold text-[#F59E0B] pt-2">سلمى عنقر · كاتبة معتمدة 🌿</span>
+</div>
+<h1 class="text-3xl sm:text-5xl font-black text-white">ديوان الأغاني والكلمات</h1>
+<p class="text-[#F59E0B] font-amiri text-lg italic">"في هذه الواجهة، كل نص شعري كُتب من نبض الروح.. وتحته مباشرة الأغنية واللحن الذي يروي حكايته."</p>
+</section>
+
+<div id="diwan-tab" class="tab-content space-y-8">
+<article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
+<h3 class="text-2xl font-black text-white">على أوتار الغياب</h3>
+<p class="text-xs text-[#F59E0B]">شجن وطرب حزين · مقام نهاوند · سنة 2024</p>
+<div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3 text-stone-200">
+<p>يمرّ الليلُ مشتعلاً بسؤالك..</p>
+<p>وكلّ دروبِ هذي الأرض مالت نحو بابِك</p>
+<p>عزفتُ على وترِ الغياب حكايتي</p>
+<p>فإذا الصدى رجعٌ ينادي خافقي: ما ماتَ عشقٌ.. صانهُ نبلُ القدر!</p>
+</div>
+<div class="p-4 rounded-xl bg-[#17161B] border border-[#2E2C36] flex items-center justify-between">
+<div>
+<span class="text-xs text-[#F59E0B] font-bold block">استمع للحن الأغنية (03:45)</span>
+<span class="text-sm font-bold text-white">ألحان: بيانو ووتريات شرقية</span>
+</div>
+<button onclick="toggleAudio('piano', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold text-xl">▶</button>
+</div>
+</article>
+
+<article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
+<h3 class="text-2xl font-black text-white">رسالة ما وصلتش</h3>
+<p class="text-xs text-[#F59E0B]">راي عاطفي / دارجة مغاربية راقية · 2024</p>
+<div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3 text-stone-200">
+<p>كتبتلك سطور في نص الليل ومسحتها</p>
+<p>خفت الكلمات تفضح دموعي وحبستها..</p>
+<p>قلت الزمان يداوي والوقت نسّاي.. وكل ما يفوت نهار يبرد جرح هواي!</p>
+</div>
+<div class="p-4 rounded-xl bg-[#17161B] border border-[#2E2C36] flex items-center justify-between">
+<div>
+<span class="text-xs text-[#F59E0B] font-bold block">استمع للحن الأغنية (04:12)</span>
+<span class="text-sm font-bold text-white">كمان وسانتي راي كلاسيكي</span>
+</div>
+<button onclick="toggleAudio('rai', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold text-xl">▶</button>
+</div>
+</article>
+
+<article class="p-6 rounded-2xl border border-[#242329] bg-[#121214] space-y-4">
+<h3 class="text-2xl font-black text-white">راني جاي</h3>
+<p class="text-xs text-[#F59E0B]">طرب عصري وجداني · نجاح جماهيري كبير</p>
+<div class="font-amiri text-lg leading-loose border-r-2 border-[#F59E0B] pr-3 text-stone-200">
+<p>قولوا للغالي راني جاي.. طال غيابي والشوق دواي</p>
+<p>طويت المسافات وجبت في قلبي حنين ووفاي.. نرجع لدياري ونشوف شمس بلادي الحبيبة!</p>
+</div>
+<div class="p-4 rounded-xl bg-[#17161B] border border-[#2E2C36] flex items-center justify-between">
+<div>
+<span class="text-xs text-[#F59E0B] font-bold block">استمع للحن المعتمد (04:18)</span>
+<span class="text-sm font-bold text-white">توزيع وتريات جزائرية</span>
+</div>
+<button onclick="toggleAudio('piano', this)" class="w-12 h-12 rounded-full bg-[#F59E0B] text-black font-bold text-xl">▶</button>
+</div>
+</article>
+</div>
+
+<div id="articles-tab" class="tab-content hidden space-y-6">
+<article class="p-8 rounded-2xl border-2 border-[#26242C] bg-[#121115] space-y-6">
+<span class="text-xs font-mono text-[#F59E0B]">المقال الافتتاحي التأسيسي · قراءة 9 دقائق</span>
+<h2 class="text-2xl sm:text-4xl font-black text-white leading-tight"> صُنّاع الخلود: كُتّاب الأغنية في الجزائر وعلى رأسهم الراحل محمد عنقر "صانع النجوم" </h2>
+<div class="p-4 bg-[#18171C] border-r-4 border-[#F59E0B] text-stone-200 font-amiri text-lg"> تاريخ الأغنية الجزائرية كُتب بأقلام شعراء نذروا أعمارهم لترجمة أفراح الناس وآلامهم. </div>
+<div class="font-amiri text-stone-300 text-lg leading-loose space-y-4">
+<p>من قصائد "الملحون" البدوية العميقة التي نظمها شيوخ الزوايا، مروراً بنصوص "الشعبي" في أزقة القصبة العتيقة، وصولاً إلى الأغنية الوهرانية والمغاربية الحديثة؛ ظل كاتب الكلمات هو البطل الخفي.</p>
+<p>وحين يُذكر التأليف وصناعة النجوم، يتصدر المشهد شقيقي الراحل محمد عنقر، الذي لُقب بـ"صانع النجوم".</p>
+</div>
+</article>
+</div>
+
+<div id="about-tab" class="tab-content hidden space-y-6">
+<div class="p-6 rounded-2xl bg-[#141318] border border-[#2B2933] space-y-4">
+<h3 class="text-xl font-bold text-[#F59E0B]">📌 السيرة الذاتية الرسمية للشاعرة سلمى عنقر</h3>
+<p class="text-stone-300 font-amiri text-base leading-relaxed"> سلمى عنقر (Selma Angar) شاعرة ومؤلفة غنائية جزائرية بارزة. نشأت وسط عائلة فنية عريقة وهي شقيقة الملحن والمؤلف الراحل محمد عنقر. </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs">
+<div class="p-3 bg-[#1B1A22] rounded-xl border border-[#2F2D38]"><strong class="text-[#F59E0B] block">خمسة خمسة:</strong> أداء نوال إسكندر · ألحان توفيق عامر</div>
+<div class="p-3 bg-[#1B1A22] rounded-xl border border-[#2F2D38]"><strong class="text-[#F59E0B] block">نعشق فيك يا الخضرا:</strong> أداء شاعو عبد القادر</div>
+<div class="p-3 bg-[#1B1A22] rounded-xl border border-[#2F2D38]"><strong class="text-[#F59E0B] block">راني جاي:</strong> عمل فني لاقى نجاحاً جماهيرياً كبيراً</div>
+<div class="p-3 bg-[#1B1A22] rounded-xl border border-[#2F2D38]"><strong class="text-[#F59E0B] block">ألبوم الـ 12 فنانة:</strong> مبادرة رائدة جمعت أكثر من 12 صوتاً نسوياً</div>
+</div>
+</div>
+</div>
+
+<div id="gallery-tab" class="tab-content hidden space-y-6">
+<div class="p-4 bg-[#141318] border border-[#2B2933] rounded-2xl text-center">
+<img src="2.jpg" alt="سلمى عنقر إطلالة البحر" class="rounded-xl w-full" />
+<h4 class="text-lg font-bold text-white pt-2">سلمى عنقر · إطلالة البحر (أجواء التأمل)</h4>
+</div>
+<div class="p-4 bg-[#141318] border border-[#2B2933] rounded-2xl text-center">
+<img src="1.jpg" alt="سلمى عنقر إطلالة الأمسيات" class="rounded-xl w-full" />
+<h4 class="text-lg font-bold text-white pt-2">إطلالة الأمسيات الشعرية والغنائية</h4>
+</div>
+</div>
+
+<div id="contact-tab" class="tab-content hidden p-6 bg-[#121114] border-2 border-[#2B2933] rounded-2xl space-y-4">
+<h3 class="text-2xl font-black text-white text-center">تواصل مع الشاعرة Salma-Angar</h3>
+<input id="userName" type="text" placeholder="اسمك أو اسم الفنان" class="w-full p-3 rounded-xl bg-[#1A191F] border border-[#2F2D37] text-white text-xs" />
+<textarea id="userMsg" rows="4" placeholder="تفاصيل العمل المطلوب أو الكلمات..." class="w-full p-3 rounded-xl bg-[#1A191F] border border-[#2F2D37] text-white text-xs"></textarea>
+<button onclick="sendWA()" class="w-full py-3 bg-[#F59E0B] text-black font-extrabold rounded-xl">إرسال لواتساب الشاعرة سلمى عنقر 💬</button>
+</div>
+
+</main>
+
+<footer class="border-t border-[#222128] py-8 text-center text-xs text-stone-500"> Salma-Angar · سلمى عنقر | الموقع الرسمي © 2026 </footer>
+
+<script>
+function showTab(id){
+document.querySelectorAll('.tab-content').forEach(e=>e.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+window.scrollTo({top:0,behavior:'smooth'});
+}
+function scrollToSection(id){ showTab(id); }
+function sendWA(){
+let n=document.getElementById('userName').value;
+let m=document.getElementById('userMsg').value;
+window.open('https://wa.me/?text='+encodeURIComponent('طلب من: '+n+'\n'+m),'_blank');
+}
+let ctx=null, osc=null, playing=false;
+function toggleAudio(type,btn){
+if(!ctx) ctx=new(window.AudioContext||window.webkitAudioContext)();
+if(playing){ if(osc) osc.stop(); playing=false; btn.innerHTML='▶'; return; }
+playing=true; btn.innerHTML='⏸';
+let now=ctx.currentTime;
+[261.6,311.1,392,415.3,392,311.1,261.6].forEach((f,i)=>{
+let o=ctx.createOscillator();
+let g=ctx.createGain();
+o.type=type==='rai'?'sawtooth':'sine';
+o.frequency.value=f;
+g.gain.setValueAtTime(0.15,now+i*0.6);
+g.gain.exponentialRampToValueAtTime(0.001,now+i*0.6+0.55);
+o.connect(g); g.connect(ctx.destination);
+o.start(now+i*0.6); o.stop(now+i*0.6+0.6);
+});
+}
+</script>
+
 </body>
 </html>
